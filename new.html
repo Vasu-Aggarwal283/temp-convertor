@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+       background-color: rgb(167, 251, 255);
+      
+    }
+      h1{
+          color: rgb(0, 0, 0);
+          padding-left: 500px;
+       }
+       h2{
+          color: red;
+         
+       }
+       p{
+          font-size: 20px;
+          font-weight: 1000;
+       }
+       div{
+         border: 2px solid black;
+         margin: 20px;
+        align-content: center;
+         
+       }
+
+    </style>
+</head>
+<body>
+   <h1>Temperature Convertor</h1>
+   <div class="con1">
+     <center>
+   <H2>Celsius to fahrenheit</H2> 
+  <input type="number" name="number" id="number" class="input"> 
+  <input type="button" value="ok" onclick="calculate()" >
+ 
+  <p id="answer1">
+</p></div></center>
+<div class="con2">
+  <center>
+  <H2>Celsius to Kelvin</H2>
+  <input type="number2" name="number2" id="number2">
+  <input type="button" value="ok" onclick="calculate2()">
+
+  <p id="answer2">
+</p></div></center>
+<div class="con3">
+  <center>
+  <H2> Kelvin to Celsius </H2>
+  <input type="number3" name="number3" id="number3">
+  <input type="button" value="ok" onclick="calculate3()">
+  <p id="answer3">
+</p></div></center>
+<div class="con4">
+  <center>
+  <H2> Kelvin to fahrenheit </H2>
+  <input type="number4" name="number4" id="number4">
+  <input type="button" value="ok" onclick="calculate4()">
+  <p id="answer4">
+</p></div></center>
+<div class="con5">
+  <center>
+  <H2> fahrenheit to Kelvin </H2>
+  <input type="number5" name="number5" id="number5">
+  <input type="button" value="ok" onclick="calculate5()">
+  <p id="answer5">
+</p></div></center>
+<div class="con6">
+  <center>
+  <H2> fahrenheit to Celsius</H2>
+  <input type="number6" name="number6" id="number6">
+  <input type="button" value="ok" onclick="calculate6()">
+   
+  
+    <p id="answer6">
+    </p></div></center>
+   <script>
+       
+function calculate(){
+let c = document.getElementById("number").value;
+document.getElementById("answer1").innerHTML= "The value of " + c +  " C in fahrenheit is " + ((1.8*c)+32) ;
+}
+function calculate2(){
+let c = document.getElementById("number2").value;
+let d = ((c*1)+ 273);
+document.getElementById("answer2").innerHTML= "The value of " + c +  " C in kelvin is " + d;
+}
+function calculate3(){
+let c = document.getElementById("number3").value;
+let d = ((c*1)-273)
+document.getElementById("answer3").innerHTML= "The value of " + c +  " K in Celsius is " + d ;
+}
+function calculate4(){
+let c = document.getElementById("number4").value;
+let d =(((c-273)*1.8)+32);
+document.getElementById("answer4").innerHTML= "The value of " + c +  " K in fahrenheit is " + d ;
+}
+function calculate5(){
+let c = document.getElementById("number5").value;
+document.getElementById("answer5").innerHTML= "The value of " + c +  " F in kelvin is " + ((c- 32) * 5/9 +273 );
+}
+function calculate6(){
+let c = document.getElementById("number6").value;
+document.getElementById("answer6").innerHTML= "The value of " + c +  " F in celsius is " + (c- 32) * 5/9  ;
+}
+
+
+   </script>
+</body>
+</html>
